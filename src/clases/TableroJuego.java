@@ -17,6 +17,8 @@ import javax.swing.JPanel;
  */
 public class TableroJuego extends JPanel
 {
+    Pelota pelota = new Pelota(0, 0);
+    
     public TableroJuego()
     {
         setBackground(Color.BLACK);        
@@ -28,6 +30,17 @@ public class TableroJuego extends JPanel
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D)g;
         g2.setColor(Color.WHITE);
-        g2.fill( new Rectangle2D.Double(0,0,20,20));
+        dibujar(g2);
+        actualizar();
+    }
+    
+    public void dibujar(Graphics2D g)
+    {
+        g.fill(pelota.getPelota());
+    }
+    
+    public void actualizar()
+    {
+        pelota.mover(getBounds());
     }
 }

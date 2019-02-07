@@ -19,7 +19,5 @@ public class Principal
         Ventana ventana = new Ventana();
         ventana.setVisible(true);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-            
-            
+    }       
 }

@@ -15,6 +15,7 @@ public class Ventana extends JFrame
 {
     private final int ANCHO = 800, ALTO = 500;
     private TableroJuego lamina;
+    private Hilo hilo;
     public Ventana()
     {
         setTitle("Pong");
@@ -23,5 +24,7 @@ public class Ventana extends JFrame
         setResizable(false);
         lamina = new TableroJuego();
         add(lamina);
+        hilo = new Hilo(lamina);
+        hilo.start();
     }   
 }
