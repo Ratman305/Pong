@@ -24,6 +24,9 @@ public class Ventana extends JFrame
         setResizable(false);
         lamina = new TableroJuego();
         add(lamina);
+        addKeyListener(new EventoTeclado());
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         hilo = new Hilo(lamina);
         hilo.start();
     }   
